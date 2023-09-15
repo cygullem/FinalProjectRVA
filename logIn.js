@@ -35,7 +35,7 @@ document.getElementById("submitButton").addEventListener("click", function(event
 
 // Login button logic
 document.getElementById("loginButton").addEventListener("click", function(event){
-    
+    event.preventDefault();
 
     let loginField = document.getElementById("email").value;  
     let password = document.getElementById("password").value;
@@ -45,6 +45,4 @@ document.getElementById("loginButton").addEventListener("click", function(event)
     } else {
         window.location.href = "index.html";
     }
-
-    event.preventDefault();
 });
