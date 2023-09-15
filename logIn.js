@@ -1,4 +1,4 @@
-// showPassword
+// Toggle password visibility
 document.getElementById("showPassword").addEventListener("change", function() {
     let passwordInput = document.getElementById("password");
     let confirmPasswordInput = document.getElementById("confirmPassword");
@@ -12,14 +12,14 @@ document.getElementById("showPassword").addEventListener("change", function() {
     }
 });
 
-
-// clear password
+// Clear password fields
 document.getElementById("clearText").addEventListener("click", function() {
     document.getElementById("password").value = "";
     document.getElementById("confirmPassword").value = "";
+    document.getElementById("email").value = "";
 });
 
-// submit button
+// Register button logic
 document.getElementById("submitButton").addEventListener("click", function(event) {
     event.preventDefault();  
 
@@ -33,7 +33,18 @@ document.getElementById("submitButton").addEventListener("click", function(event
     }
 });
 
-// login button
-document.getElementById('loginButton').addEventListener('click', function(){
-    window.location.href = '../index.html';
+// Login button logic
+document.getElementById("loginButton").addEventListener("click", function(event){
+    
+
+    let loginField = document.getElementById("email").value;  
+    let password = document.getElementById("password").value;
+
+    if (!loginField || !password) {
+        alert("Please fill in all login fields.");
+    } else {
+        window.location.href = "index.html";
+    }
+
+    event.preventDefault();
 });
