@@ -13,7 +13,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     /* background-color: rgb(159, 227, 236); */
-    background: url('Firewatch-fantasy-art-purple.jpg') no-repeat;
+    background: url('./img/Firewatch-fantasy-art-purple.jpg') no-repeat;
     background-size: 100% 100%;
     background-position: center;
 }
