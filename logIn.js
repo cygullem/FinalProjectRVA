@@ -32,3 +32,8 @@ document.getElementById("submitButton").addEventListener("click", function(event
         window.location.href = "logIn.html"; 
     }
 });
+
+// login button
+document.getElementById('loginButton').addEventListener('click', function(){
+    window.location.href = '../index.html';
+});
